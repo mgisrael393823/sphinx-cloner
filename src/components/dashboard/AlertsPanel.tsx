@@ -67,7 +67,7 @@ const getSeverityColor = (severity: AlertSeverity) => {
 
 const AlertsPanel = ({ alerts = defaultAlerts }: AlertsPanelProps) => {
   return (
-    <Card className="w-[400px] h-[300px] bg-white dark:bg-gray-800">
+    <Card className="w-full min-h-[400px] lg:h-[400px] bg-white dark:bg-gray-800">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-xl font-bold flex items-center gap-2">
           <Bell className="h-5 w-5" />
@@ -76,7 +76,7 @@ const AlertsPanel = ({ alerts = defaultAlerts }: AlertsPanelProps) => {
         <Badge variant="secondary">{alerts.length} New</Badge>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="h-[220px] w-full pr-4">
+        <ScrollArea className="h-[300px] lg:h-[320px] w-full pr-4">
           <div className="space-y-4">
             {alerts.map((alert, index) => (
               <div key={alert.id}>

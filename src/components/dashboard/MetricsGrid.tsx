@@ -61,8 +61,8 @@ const defaultPlatforms: Platform[] = [
 
 const MetricsGrid = ({ platforms = defaultPlatforms }: MetricsGridProps) => {
   return (
-    <div className="w-full h-full bg-gray-50 dark:bg-gray-900 p-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="w-full bg-gray-50 dark:bg-gray-900 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {platforms.map((platform, index) => (
           <MetricCard
             key={index}
